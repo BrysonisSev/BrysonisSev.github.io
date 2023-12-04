@@ -7,9 +7,9 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: rgb(0, 0, 0)1, 53, 53);
+			width: 90px;
+			height: 90px;
+			background-color: rgb(6, 129, 129);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -49,10 +49,10 @@
 			setInterval(update, 50);
 
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
-			box.on('click', handleBoxClick()) 
-				positionX = 1;
-				changeBoxText(1);
-			}
+			box.on('click', handleBoxClick)
+			positionX = 1;
+			changeBoxText(1);
+
 
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX) {
@@ -70,8 +70,8 @@
 
 			// TODO 2 - Variable declarations 
 
-			var myVariable = someValue;
-
+			var positionX = 0;
+			var points = 1
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -79,7 +79,7 @@
 			turn it around! 
 			*/
 			function update() {
-				positionX = positionX + 10;
+				positionX = positionX + 20;
 				moveBoxTo(positionX);
 			};
 
@@ -90,9 +90,13 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
-				changeBoxText(1);
-				changeBoxText(points);
+				changeBoxText(1)
+				changeBoxText(points)
 			};
+			function update() {
+				positionX = positionX + 10;
+				moveBoxTo(positionX)
+			}
 		})();
 	</script>
 </body>
